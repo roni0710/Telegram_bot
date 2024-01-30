@@ -34,11 +34,11 @@ def send_email(to_addr, subject, text):
     server.auth_plain()
     server.send_message(msg)
 
-sender = "egorub2003@yandex.ru"
-password = 'mckswxkbsvebyzuq'
-to_addr1 = "egorub2003@yandex.ru"
-to_addr2 = "egorub2003@mail.ru"
-to_addr3 = "agafurova1998700@yandex.ru"
+sender = "email_1"
+password = '...'
+to_addr1 = "email_2"
+to_addr2 = "email_3"
+to_addr3 = "email_4"
 def telegram_bot(token):
     bot = telebot.TeleBot(token)
 
@@ -50,13 +50,13 @@ def telegram_bot(token):
 
             keyboard = types.InlineKeyboardMarkup()   # Готовим кнопки
 
-            key_mail_1 = types.InlineKeyboardButton(text='egorub2003@yandex.com', callback_data='1')   # По очереди готовим текст и обработчик
+            key_mail_1 = types.InlineKeyboardButton(text='...', callback_data='1')   # По очереди готовим текст и обработчик
             keyboard.add(key_mail_1)   # И добавляем кнопку на экран
 
-            key_mail_2 = types.InlineKeyboardButton(text='egorub2003@mail.ru', callback_data='2')   # По очереди готовим текст и обработчик
+            key_mail_2 = types.InlineKeyboardButton(text='...', callback_data='2')   # По очереди готовим текст и обработчик
             keyboard.add(key_mail_2)   # И добавляем кнопку на экран
 
-            key_mail_3 = types.InlineKeyboardButton(text='agafurova1998700@yandex.ru', callback_data='3')   # По очереди готовим текст и обработчик
+            key_mail_3 = types.InlineKeyboardButton(text='...', callback_data='3')   # По очереди готовим текст и обработчик
             keyboard.add(key_mail_3)   # И добавляем кнопку на экран
 
             bot.send_message(message.from_user.id, text='Выбери нужную почту, кому необходимо отправить письмо', reply_markup=keyboard)
